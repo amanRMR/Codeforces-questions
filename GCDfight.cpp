@@ -10,17 +10,14 @@ int main() {
 
     while (t--) {
         
-        ll a,b;
-        cin>>a>>b;
+        int n,m, i, j;
+        cin>>n>>m>>i>>j;
 
-        if(a==b){
-            cout<<0<<" "<<0;
+        if( (i==1 || i==n) && (j==1 || j==m) ){
+            cout<< n-i +1<<" "<< m-j+1<<" " n/2 <<" "<<m/2;
+
         }else{
-            ll gcd= abs(a-b);
-            
-            ll operations = min( a%gcd, gcd - a%gcd);
-
-            cout<<gcd<<" "<<operations;
+            cout<< 1<<" "<<1<<" "<<n<<" "<<m;
         }
             
         cout<<endl;
